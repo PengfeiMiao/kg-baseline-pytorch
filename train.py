@@ -282,7 +282,7 @@ if __name__ == '__main__':
             optimizer.step()
 
         torch.save(s_m, model_path + '/s_' + str(i) + '.pkl')
-        torch.save(po_m, model_path + 'po_' + str(i) + '.pkl')
+        torch.save(po_m, model_path + '/po_' + str(i) + '.pkl')
         f1, precision, recall = evaluate()
 
         print("epoch:", i, "loss:", loss_sum.data)
